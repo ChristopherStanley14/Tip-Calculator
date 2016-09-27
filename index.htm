@@ -1,0 +1,103 @@
+<html>
+
+<head>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="tipCalc.css">
+
+    <script type="text/javascript" src="tipCalc.js"></script>
+
+    <title>Tip Calculator</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="background">
+                <br />
+                <br />
+                <div class="container" id="calc">
+                    <div class="row" id="header">
+                        <h1> Tip Calculator</h1>
+                    </div>
+                    <hr />
+
+                    <div class="row" id="bill">
+                        How much was your bill?
+                        <p>$<input id="billAmt" style="width: 80px" type="text" name="bill"></p>
+                    </div>
+                    <br />
+                    <div class="row" id="service">
+                        How was your service?
+                        <select required id="percentage">
+                            <option value="" disabled selected>--Choose an option--</option>
+                            
+                            <option value=".30">30% - Outstanding</option>
+                            <option value=".20">20% - Good</option>
+                            <option value=".15">15% - It was okay</option>
+                            <option value=".10">10% - Bad</option>
+                            <option value=".05">5% - Terrible</option>
+                        </select>
+                        <br />
+                    </div>
+
+
+                    <br />
+                    <div class="row" id="split">
+                        How many people are sharing the bill?
+                        <p> <input id="split1" value="1" style="width: 80px" type="number"> people</p>
+                    </div>
+                    <br />
+                    <center>
+                        <button id="button" class="btn btn-primary">CALCULATE</button>
+                        <button id="reset" class="btn btn-danger" onclick="window.location.reload()">RESET</button>
+                    </center>
+
+
+                    <div id="tipAmt" class="row">
+                        <br />
+                        <div id="leftAmount">
+                        <span>Tip Amount</span> <br />
+                        <span id="tipResult"></span> <br />
+                        <span>each</span>
+                        </div>
+
+                        <div id="rightAmount">
+                        <span>Total Amount</span> <br />
+                        <span id="totalAmount"></span> <br />
+                        <span>each</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
