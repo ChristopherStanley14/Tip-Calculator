@@ -3,6 +3,8 @@ $(function() {
     $("#button").on("click", calculate);
     $("#tipAmt").hide();
     $("#totalAmount").hide();
+    $("#TA").hide();
+    $("#each").hide();
 });
 
 
@@ -44,6 +46,8 @@ function calcTip(bill, percentage, split) {
         var totalAmount = ((+bill + (+result * +split)) / +split).toFixed(2);
         $("#totalAmount").append("$" + totalAmount);
         $("#totalAmount").show();
+        $("#TA").show();
+        $("#each").show();
     }
     
 $("#tipResult").fadeIn();
